@@ -17,6 +17,7 @@ struct Home: View {
                     .resizable()
                     .cornerRadius(15)
                     .aspectRatio(contentMode: .fit)
+                    .shadow(radius: 15)
                 
                 HStack {
                     Spacer()
@@ -24,7 +25,7 @@ struct Home: View {
                     Text("Bean Bandits")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color.black)
+//                        .foregroundColor(Color.black)
                     
                     Button(action: {
                         // This will change the state, showing the alert
@@ -43,10 +44,10 @@ struct Home: View {
                 }
             }
             .padding()
-            .background(Rectangle()
-                .foregroundColor(.white)
-                .cornerRadius(15)
-                .shadow(radius: 15))
+//            .background(Rectangle()
+//                .foregroundColor(.white)
+//                .cornerRadius(15)
+//                .shadow(radius: 15))
             .padding()
         }
     }

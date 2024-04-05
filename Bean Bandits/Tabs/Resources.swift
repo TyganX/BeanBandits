@@ -19,7 +19,7 @@ struct URLButton: View {
             HStack {
                 Label(label, systemImage: systemImage)
                 Spacer()
-                Image(systemName: "link")
+//                Image(systemName: "link")
                     .foregroundColor(.gray)
             }
         }
@@ -56,7 +56,8 @@ struct Resources: View {
     var body: some View {
         NavigationStack{
             List {
-                Section("TEXAS RENAISSANCE FESTIVAL") {
+//                Section("TEXAS RENAISSANCE FESTIVAL") {
+                Section {
                     URLButton(label: "Tickets", systemImage: "ticket.fill", urlString: "https://www.texrenfest.com/tickets")
                     
                     NavigationLink(destination: Maps(imageName: "TRFFestivalMap")) {
@@ -68,9 +69,13 @@ struct Resources: View {
                     }
                     
                     URLButton(label: "Lost & Found", systemImage: "questionmark.app.fill", urlString: "https://www.texrenfest.com/lost-and-found")
-                    
+                } header: {
+                    Text("TEXAS RENAISSANCE FESTIVAL")
+                        .bold()
                 }
-                Section("SHERWOOD FOREST FAIRE"){
+                
+//                Section("SHERWOOD FOREST FAIRE"){
+                Section {
                     URLButton(label: "Tickets", systemImage: "ticket.fill", urlString: "https://www.etix.com/ticket/v/12633/sherwood-forest-faire?cobrand=SherwoodForest")
 
                     NavigationLink(destination: Maps(imageName: "SFFFestivalMap")) {
@@ -83,7 +88,11 @@ struct Resources: View {
 
                     URLButton(label: "Performance Schedule", systemImage: "calendar", urlString: "https://www.sherwoodforestfaire.com/performance-schedule")
                     
-                    URLButton(label: "Lost & Found", systemImage: "questionmark.diamond.fill", urlString: "https://docs.google.com/forms/d/e/1FAIpQLSfjtw__EmEXitzdBxUeoHEzXZOWcDJ4iBAzotlq8podyhe9AQ/viewform?fbclid=IwAR2UOFTry3PYHK-uevjDgaijKchnpfctJKWWGZC3rTnWcwVHKSxotq0W-dw_aem_ASwbpiQpCOwKBpjyMCjJR6_YL6afxNXs_uMhMXn_jwOjofyWRy44pXSwA93blZyT7qk")
+                    URLButton(label: "Lost & Found", systemImage: "questionmark.app.fill", urlString: "https://docs.google.com/forms/d/e/1FAIpQLSfjtw__EmEXitzdBxUeoHEzXZOWcDJ4iBAzotlq8podyhe9AQ/viewform?fbclid=IwAR2UOFTry3PYHK-uevjDgaijKchnpfctJKWWGZC3rTnWcwVHKSxotq0W-dw_aem_ASwbpiQpCOwKBpjyMCjJR6_YL6afxNXs_uMhMXn_jwOjofyWRy44pXSwA93blZyT7qk")
+                    
+                } header: {
+                    Text("TEXAS RENAISSANCE FESTIVAL")
+                        .bold()
                 }
             }
                 .navigationTitle("Resources")
