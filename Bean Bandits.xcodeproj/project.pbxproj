@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2D98752BC5D1D500A5FFAD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D98742BC5D1D500A5FFAD /* About.swift */; };
 		2F3811992BBC7A1700B7062D /* Bean_BanditsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3811982BBC7A1700B7062D /* Bean_BanditsApp.swift */; };
 		2F38119B2BBC7A1700B7062D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38119A2BBC7A1700B7062D /* ContentView.swift */; };
 		2F38119D2BBC7A1700B7062D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38119C2BBC7A1700B7062D /* Item.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2D98742BC5D1D500A5FFAD /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		2F3811952BBC7A1700B7062D /* Bean Bandits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Bandits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3811982BBC7A1700B7062D /* Bean_BanditsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_BanditsApp.swift; sourceTree = "<group>"; };
 		2F38119A2BBC7A1700B7062D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				2F3811C52BBCA11500B7062D /* Home.swift */,
 				2F3811C72BBCA11E00B7062D /* Resources.swift */,
 				2F3811C92BBCA12900B7062D /* Chat.swift */,
+				2F2D98742BC5D1D500A5FFAD /* About.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				2F38119B2BBC7A1700B7062D /* ContentView.swift in Sources */,
 				2F3811C82BBCA11E00B7062D /* Resources.swift in Sources */,
+				2F2D98752BC5D1D500A5FFAD /* About.swift in Sources */,
 				2F38119D2BBC7A1700B7062D /* Item.swift in Sources */,
 				2F3811C62BBCA11500B7062D /* Home.swift in Sources */,
 				2F3811CA2BBCA12900B7062D /* Chat.swift in Sources */,

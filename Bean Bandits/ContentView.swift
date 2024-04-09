@@ -21,10 +21,10 @@ struct ContentView: View {
                     Text("Resources")
                 }
 
-            Chat()
+            About()
                 .tabItem() {
                     Image(systemName: "ellipsis.message")
-                    Text("Chat")
+                    Text("About")
                 }
         }
     }

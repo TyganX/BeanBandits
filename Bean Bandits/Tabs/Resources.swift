@@ -20,9 +20,10 @@ struct URLButton: View {
                 Label(label, systemImage: systemImage)
                 Spacer()
 //                Image(systemName: "link")
-                    .foregroundColor(.gray)
+//                    .foregroundColor(.gray)
             }
         }
+        .buttonStyle(PlainButtonStyle())
     }
 
     func openURL(urlString: String) {
@@ -56,8 +57,15 @@ struct Resources: View {
     var body: some View {
         NavigationStack{
             List {
-//                Section("TEXAS RENAISSANCE FESTIVAL") {
-                Section {
+                Section(header: Text("BEAN BANDITS").bold()) {
+                    URLButton(label: "Website", systemImage: "globe", urlString: "https://www.beanbandits.net")
+                    
+                    URLButton(label: "Discord", systemImage: "person.bubble.fill", urlString: "discord://discord.gg/bE5tkVdAt9")
+                    
+                    URLButton(label: "Telegram", systemImage: "paperplane.fill", urlString: "https://t.me/BeanBandits")
+                }
+                
+                Section(header: Text("TEXAS RENAISSANCE FESTIVAL").bold()) {
                     URLButton(label: "Tickets", systemImage: "ticket.fill", urlString: "https://www.texrenfest.com/tickets")
                     
                     NavigationLink(destination: Maps(imageName: "TRFFestivalMap")) {
@@ -69,13 +77,9 @@ struct Resources: View {
                     }
                     
                     URLButton(label: "Lost & Found", systemImage: "questionmark.app.fill", urlString: "https://www.texrenfest.com/lost-and-found")
-                } header: {
-                    Text("TEXAS RENAISSANCE FESTIVAL")
-                        .bold()
                 }
                 
-//                Section("SHERWOOD FOREST FAIRE"){
-                Section {
+                Section(header: Text("SHERWOOD FOREST FAIRE").bold()) {
                     URLButton(label: "Tickets", systemImage: "ticket.fill", urlString: "https://www.etix.com/ticket/v/12633/sherwood-forest-faire?cobrand=SherwoodForest")
 
                     NavigationLink(destination: Maps(imageName: "SFFFestivalMap")) {
@@ -89,10 +93,6 @@ struct Resources: View {
                     URLButton(label: "Performance Schedule", systemImage: "calendar", urlString: "https://www.sherwoodforestfaire.com/performance-schedule")
                     
                     URLButton(label: "Lost & Found", systemImage: "questionmark.app.fill", urlString: "https://docs.google.com/forms/d/e/1FAIpQLSfjtw__EmEXitzdBxUeoHEzXZOWcDJ4iBAzotlq8podyhe9AQ/viewform?fbclid=IwAR2UOFTry3PYHK-uevjDgaijKchnpfctJKWWGZC3rTnWcwVHKSxotq0W-dw_aem_ASwbpiQpCOwKBpjyMCjJR6_YL6afxNXs_uMhMXn_jwOjofyWRy44pXSwA93blZyT7qk")
-                    
-                } header: {
-                    Text("TEXAS RENAISSANCE FESTIVAL")
-                        .bold()
                 }
             }
                 .navigationTitle("Resources")
