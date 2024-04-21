@@ -6,29 +6,42 @@
 //
 
 import SwiftUI
+import SafariServices
+
+struct SafariView: UIViewControllerRepresentable {
+    var url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+        // No action needed here.
+    }
+}
 
 struct URLButton: View {
     let label: String
     let systemImage: String
     let urlString: String
 
+    @State private var showingSafariView = false
+
     var body: some View {
         Button(action: {
-            openURL(urlString: urlString)
+            self.showingSafariView = true
         }) {
             HStack {
                 Label(label, systemImage: systemImage)
                 Spacer()
-//                Image(systemName: "link")
-//                    .foregroundColor(.gray)
             }
         }
         .buttonStyle(PlainButtonStyle())
-    }
-
-    func openURL(urlString: String) {
-        if let url = URL(string: urlString) {
-            UIApplication.shared.open(url)
+        .fullScreenCover(isPresented: $showingSafariView) {
+            if let url = URL(string: urlString) {
+                SafariView(url: url)
+                    .ignoresSafeArea()
+            }
         }
     }
 }
